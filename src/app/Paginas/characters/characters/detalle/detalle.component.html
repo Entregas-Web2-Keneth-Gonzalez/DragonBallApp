@@ -1,0 +1,26 @@
+<h1>{{character.name}}</h1>
+
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>{{character.name}}</mat-card-title>
+        <mat-card-subtitle>{{character.race}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image *ngIf="character.image" [src]="character.image" alt="{{character.name}}">
+
+    <mat-card-content>
+        <p>Id: {{character.id}}</p>
+        <p>Name: {{character.name}}</p>
+        <p>Ki: {{character.ki}}</p>
+        <p>Race: {{character.race}}</p>
+        <p>Gender: {{character.gender}}</p>
+        <p>Affiliation: {{character.affiliation}}</p>
+        <p>OriginPlanet: {{character.originPlanet?.name}}</p>
+
+    </mat-card-content>
+
+    <button mat-button (click)="closeDialog()">Buscar Personaje</button>
+
+    <button mat-button (click)="closeDialog()">Cerrar</button>
+
+</mat-card>

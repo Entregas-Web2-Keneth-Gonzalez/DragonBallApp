@@ -1,0 +1,12 @@
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/" routerLinkActive="active">Principal</button>
+    <button mat-menu-item routerLink="/characters" routerLinkActive="active">Personajes</button>
+    <button mat-menu-item routerLink="/character" routerLinkActive="active">Buscar Personaje</button>
+    <button mat-menu-item routerLink="/planets" routerLinkActive="active">Planetas</button>
+</mat-menu>
+
+<mat-toolbar class="banner-toolbar">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f993868-5417-4268-9c23-1c6f0fc60b91/df8haw3-70a26ab5-982b-417f-85f7-ac77a19eb836.png/v1/fill/w_1600,h_517,q_80,strp/dbz_bt3___banner_by_evilzgaruda_df8haw3-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTE3IiwicGF0aCI6IlwvZlwvNWY5OTM4NjgtNTQxNy00MjY4LTljMjMtMWM2ZjBmYzYwYjkxXC9kZjhoYXczLTcwYTI2YWI1LTk4MmItNDE3Zi04NWY3LWFjNzdhMTllYjgzNi5wbmciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Y1fUgcgqROf887vNHyYVNobWFqFiu4r7_BEtDKGmd9A" alt="DragonBallApp" class="banner-image">
+</mat-toolbar>
+

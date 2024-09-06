@@ -1,0 +1,45 @@
+<form class="example-form" class="buscar">
+    <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput #message maxlength="256" placeholder="">
+        <mat-hint align="start">
+            <strong>Ingrese el Id del personaje</strong>
+        </mat-hint>
+        <mat-hint align="end">{{message.value.length}} / 2</mat-hint>
+    </mat-form-field>
+    <section>
+        <div class="example-button-row">
+            <button mat-flat-button (click)="buscarPersonaje($event)">Buscar</button>
+        </div>
+    </section>
+</form>
+
+<mat-card class="example-card" appearance="outlined" class="buscar">
+    <mat-card-header>
+        <mat-card-title>{{character?.name}}</mat-card-title>
+        <mat-card-subtitle>{{character?.race}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image *ngIf="character?.image" [src]="character?.image" alt="{{character?.name}}">
+
+    <mat-card-content>
+
+        <p>Id: {{character?.id}}</p>
+        <p>Name: {{character?.name}}</p>
+        <p>Ki: {{character?.ki}}</p>
+        <p>MaxKi: {{character?.maxKi}}</p>
+        <p>Race: {{character?.race}}</p>
+        <p>Gender: {{character?.gender}}</p>
+        <p>Description: {{character?.description}}</p>
+        <p>Affiliation: {{character?.affiliation}}</p>
+        <p>OriginPlanet: {{character?.originPlanet?.name}}</p>
+        <p *ngIf="getTransformations().length === 0">No getTransformations</p>
+        <div *ngFor="let transformation of getTransformations()">
+            <p>Id: {{transformation.id}}</p>
+            <p>Ki: {{transformation.ki}}</p>
+            <p>Name: {{transformation.name}}</p>
+            <img [src]="transformation.image" alt="{{transformation.name}}" style="width: 100px; height: auto;">
+        </div>
+
+    </mat-card-content>
+</mat-card>
