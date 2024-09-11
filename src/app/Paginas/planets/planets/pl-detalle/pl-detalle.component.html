@@ -15,7 +15,7 @@
 
   </mat-card-content>
 
-  <button mat-button (click)="closeDialog()">Mas Detalles</button>
+  <button mat-button [routerLink]="['searchpl', planet.id]" (click)="closeDialog()">Ver mas detalles</button>
 
   <button mat-button (click)="closeDialog()">Cerrar</button>
 

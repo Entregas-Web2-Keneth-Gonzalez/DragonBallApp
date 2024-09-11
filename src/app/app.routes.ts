@@ -20,5 +20,9 @@ export const routes: Routes = [
     {
       path: 'planet',
       loadChildren: () => import ('./Paginas/planet/planet.module').then ((m) => m.PlanetModule),
+    },
+    {
+      path: 'searchpl/:id',
+      loadChildren: () => import ('./Paginas/detail-pl/detail-pl.module').then((m) => m.DetailPlModule),
     }
 ];

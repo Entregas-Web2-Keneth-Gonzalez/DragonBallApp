@@ -1,19 +1,3 @@
-<form class="example-form" class="buscar">
-  <mat-form-field class="example-full-width">
-      <mat-label>Id</mat-label>
-      <input matInput #message maxlength="256" placeholder="">
-      <mat-hint align="start">
-          <strong>Ingrese el Id del planeta</strong>
-      </mat-hint>
-      <mat-hint align="end">{{message.value.length}} / 2</mat-hint>
-  </mat-form-field>
-  <section>
-      <div class="example-button-row">
-          <button mat-flat-button (click)="buscarPlaneta($event)">Buscar</button>
-      </div>
-  </section>
-</form>
-
 <mat-card class="example-card" appearance="outlined" class="buscar">
   <mat-card-header>
       <mat-card-title>{{planet?.name}}</mat-card-title>

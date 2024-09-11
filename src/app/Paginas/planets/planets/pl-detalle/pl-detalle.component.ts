@@ -5,11 +5,12 @@ import Planets from '../../../../Modelos/Planets';
 import { PlanetService } from '../../../../Servicios/PlanetService/planet.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { NgIf } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-pl-detalle',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, NgIf],
+  imports: [MatCardModule, MatButtonModule, NgIf, RouterModule],
   templateUrl: './pl-detalle.component.html',
   styleUrl: './pl-detalle.component.scss'
 })

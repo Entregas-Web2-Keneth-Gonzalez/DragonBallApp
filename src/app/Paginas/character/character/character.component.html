@@ -33,6 +33,7 @@
         <p>Description: {{character?.description}}</p>
         <p>Affiliation: {{character?.affiliation}}</p>
         <p>OriginPlanet: {{character?.originPlanet?.name}}</p>
+        <h1>Transformaciones</h1>
         <p *ngIf="getTransformations().length === 0">No getTransformations</p>
         <div *ngFor="let transformation of getTransformations()">
             <p>Id: {{transformation.id}}</p>
