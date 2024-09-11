@@ -6,11 +6,12 @@ import { CharacterService } from '../../../../Servicios/CharacterService/charact
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { NgFor, NgIf } from '@angular/common';
 import { CharacterComponent } from '../../../character/character/character.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-detalle',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, NgIf, NgFor],
+  imports: [MatCardModule, MatButtonModule, NgIf, NgFor, RouterModule],
   templateUrl: './detalle.component.html',
   styleUrl: './detalle.component.scss'
 })
@@ -18,7 +19,7 @@ export class DetalleComponent {
 
   title = "Personaje";
   character!: Characters;
-  
+
   constructor(private CharService: CharacterService,
     private dialogRef: MatDialogRef<DetalleComponent>,
     @Inject(MAT_DIALOG_DATA) public data: {id: number, character: Characters},
@@ -45,7 +46,7 @@ export class DetalleComponent {
     }else{
       return [];
     }
-  }  
+  }
 
   closeDialog(){
     this.dialogRef.close()

@@ -7,7 +7,7 @@ interface Planets {
     isDestroyed: boolean;
     description: string;
     image: string;
-    characters: Characters[];
+    characters?: Characters[];
 
 }
 

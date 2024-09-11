@@ -1,0 +1,22 @@
+<h1>{{planet.name}}</h1>
+
+<mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+      <mat-card-title>{{planet.name}}</mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image *ngIf="planet.image" [src]="planet.image" alt="{{planet.name}}">
+
+  <mat-card-content>
+      <p>Id: {{planet.id}}</p>
+      <p>Name: {{planet.name}}</p>
+      <p>isDestroyed: {{planet.isDestroyed}}</p>
+      <p>Descripton: {{planet.description}}</p>
+
+  </mat-card-content>
+
+  <button mat-button (click)="closeDialog()">Mas Detalles</button>
+
+  <button mat-button (click)="closeDialog()">Cerrar</button>
+
+</mat-card>

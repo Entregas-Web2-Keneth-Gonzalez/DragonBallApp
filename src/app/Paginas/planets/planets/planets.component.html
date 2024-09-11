@@ -1,0 +1,27 @@
+<h1>Lista de planetas</h1>
+
+<table mat-table [dataSource]="planets" class="mat-elevation-z8">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>id</th>
+    <td mat-cell *matCellDef="let element">{{element.id}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>name</th>
+    <td mat-cell *matCellDef="let element">{{element.name}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="detalle">
+    <th mat-header-cell *matHeaderCellDef>detalle</th>
+    <td mat-cell *matCellDef="let element">
+      <section>
+        <div class="example-button-row">
+          <button mat-flat-button (click)="openDialog(element.id)">detalle</button>
+        </div>
+      </section>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderCellDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

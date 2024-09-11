@@ -1,0 +1,29 @@
+<mat-card class="example-card" appearance="outlined" class="buscar">
+  <mat-card-header>
+      <mat-card-title>{{character?.name}}</mat-card-title>
+      <mat-card-subtitle>{{character?.race}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img mat-card-image *ngIf="character?.image" [src]="character?.image" alt="{{character?.name}}">
+
+  <mat-card-content>
+
+      <p>Id: {{character?.id}}</p>
+      <p>Name: {{character?.name}}</p>
+      <p>Ki: {{character?.ki}}</p>
+      <p>MaxKi: {{character?.maxKi}}</p>
+      <p>Race: {{character?.race}}</p>
+      <p>Gender: {{character?.gender}}</p>
+      <p>Description: {{character?.description}}</p>
+      <p>Affiliation: {{character?.affiliation}}</p>
+      <p>OriginPlanet: {{character?.originPlanet?.name}}</p>
+      <p *ngIf="getTransformations().length === 0">No getTransformations</p>
+      <div *ngFor="let transformation of getTransformations()">
+          <p>Id: {{transformation.id}}</p>
+          <p>Ki: {{transformation.ki}}</p>
+          <p>Name: {{transformation.name}}</p>
+          <img [src]="transformation.image" alt="{{transformation.name}}" style="width: 100px; height: auto;">
+      </div>
+
+  </mat-card-content>
+</mat-card>

@@ -19,7 +19,7 @@
 
     </mat-card-content>
 
-    <button mat-button (click)="closeDialog()">Buscar Personaje</button>
+    <button mat-button [routerLink]="['/search', character.id]" (click)="closeDialog()">Ver mas detalles</button>
 
     <button mat-button (click)="closeDialog()">Cerrar</button>
 
